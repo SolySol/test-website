@@ -1,0 +1,991 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap');
+
+:root{
+   --main-color:#bf9053;
+   --sub-color:#000000;
+   --white:#ffffff;
+   --border:.1rem solid rgba(220, 198, 156, .3);
+}
+
+*{
+   font-family: 'Montserrat', sans-serif;
+   margin: 0; padding: 0;
+   box-sizing: border-box;
+   outline: none; border: none;
+   text-decoration: none;
+}
+
+*::selection{
+   background-color: var(--sub-color);
+   color: var(--main-color);
+}
+
+*::-webkit-scrollbar{
+   height: .5rem;
+   width: 1rem;
+}
+
+*::-webkit-scrollbar-track{
+   background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb{
+   background-color: var(--sub-color);
+   border-radius: 5rem;
+}
+
+html{
+   font-size: 62.5%;
+   overflow-x: hidden;
+   scroll-behavior: smooth;
+   scroll-padding-top: 2rem;
+}
+
+body{
+   background-color: var(--main-color);
+   /* padding-bottom: 7.5rem; */
+}
+
+section{
+   padding: 3rem 2rem;
+   max-width: 1800px;
+   margin: 0 auto;
+}
+
+.btn{
+   display: inline-block;
+   cursor: pointer;
+   padding: 1rem 3rem;
+   border: var(--border);
+   font-size: 1.8rem;
+   color: var(--sub-color);
+   text-align: center;
+   text-transform: capitalize;
+   transition: .2s linear;
+   margin-top: 1rem;
+   background-color: var(--main-color);
+}
+
+.btn:hover{
+   border-radius: 5rem;
+   background-color: var(--sub-color);
+   color: var(--main-color);
+}
+
+
+
+/* -----------------------header------------------------------------- */
+.header .welcome-message {
+   font-size: 1.6rem;
+   font-weight: 500;
+   color: var(--sub-color);
+   margin-right: 20px; /* Add spacing before the logout button */
+}
+.header {
+   padding: 10px 20px; /* Adjust padding for a clean look */
+   background-color: var(--main-color); /* Ensure consistent background color */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+   position: sticky; /* Keep header at the top */
+   top: 0;
+   z-index: 1000; /* Ensure it stays above other elements */
+   display: flex; /* Use flexbox for alignment */
+   justify-content: space-between; /* Space between logout and nav */
+   align-items: center; /* Center items vertically */
+}
+
+.header .flex {
+   display: flex;
+   align-items: center;
+   gap: 1.5rem;
+   max-width: 1200px;
+   width: 100%;
+   margin: 0 auto; /* Center content within header */
+}
+
+.header .logo {
+   font-size: 2.8rem;
+   font-weight: 700;
+   color: var(--sub-color);
+   text-transform: uppercase;
+}
+
+.header .navbar {
+   display: flex;
+   gap: 2rem;
+}
+
+.header .navbar a {
+   font-size: 1.6rem;
+   color: var(--sub-color);
+   text-decoration: none;
+   padding: 0.7rem 1.2rem;
+   border-radius: 0.3rem;
+   transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.header .navbar a:hover {
+   background-color: var(--sub-color);
+   color: var(--white);
+}
+
+.header .logout {
+   margin-left: 0; /* Align the logout button to the left */
+   font-size: 1.6rem;
+   font-weight: 500;
+   color: var(--main-color);
+   background-color: var(--sub-color);
+   padding: 0.7rem 1.5rem;
+   border-radius: 5px;
+   text-decoration: none; /* Remove underline */
+   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header .logout:hover {
+   background-color: var(--white); /* Change background on hover */
+   color: var(--sub-color);
+}
+
+@media (max-width: 768px) {
+   .header {
+       flex-direction: column; /* Stack elements vertically on smaller screens */
+   }
+   .header .navbar {
+       flex-direction: column;
+       gap: 1rem;
+       align-items: center;
+   }
+   .header .logout {
+       margin: 10px 0; /* Add margin for spacing in mobile view */
+   }
+}
+.header .fa-bars {
+   font-size: 2.5rem;
+   cursor: pointer;
+   color: var(--sub-color);
+   display: none; /* Hidden by default */
+}
+
+@media (max-width: 768px) {
+   .header .fa-bars {
+       display: block; /* Show menu button only on smaller screens */
+       margin-left: auto; /* Align it to the right */
+   }
+
+   .header .navbar {
+       display: none; /* Hide the navigation links on mobile by default */
+       flex-direction: column;
+       gap: 1rem;
+       position: absolute;
+       top: 100%; /* Below the header */
+       left: 0;
+       right: 0;
+       background-color: var(--main-color);
+       border-radius: 0 0 10px 10px;
+       padding: 1rem 0;
+   }
+
+   .header .navbar.active {
+       display: flex; /* Show navbar when active (e.g., toggled by JavaScript) */
+   }
+}
+
+
+
+
+
+/* end of header */
+
+
+
+
+.home .box img{
+   border-radius: .5rem;
+   height: 60vh;
+   width: 100%;
+   object-fit: cover;
+}
+
+.home .box .flex{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 1.5rem;
+   flex-wrap: wrap;
+   margin-top: 1.5rem;
+}
+
+.home .box .flex h3{
+   font-size: 2.5rem;
+   color: var(--sub-color);
+   text-transform: capitalize;
+}
+
+.swiper-button-prev{
+   left: 0%;
+}
+
+.swiper-button-next{
+   right: 0;
+}
+
+.swiper-button-next,
+.swiper-button-prev{
+   padding: 3rem 2rem;
+   background-color: var(--white);
+   top: 40%;
+   opacity: .7;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after{
+   color: var(--main-color);
+   font-size: 2rem;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover{
+   opacity: 1;
+}
+
+/* .availability form h1{
+   color: var(--white);
+   padding-top: 100px;
+   padding: 2rem 0;
+   
+} */
+.availability {
+   display: flex;
+   justify-content: center; /* Center the form horizontally */
+   align-items: center;
+   margin-top: 5rem; /* Adjust spacing above the section */
+   margin-bottom: 10rem; /* Adjust spacing below the section */
+}
+
+.availability form {
+   max-width: 600px; /* Set a max width for the form */
+   width: 100%; /* Make form responsive */
+   margin: 0 auto; /* Center the form within the section */
+   border: var(--border);
+   padding: 2rem;
+}
+
+.availability form h3 {
+   background-color: var(--sub-color);
+   color: var(--main-color);
+   font-size: 2.5rem;
+   margin-bottom: 2rem;
+   border-radius: .5rem;
+   padding: 1.2rem;
+   text-align: center;
+   text-transform: capitalize;
+}
+
+.availability form .flex{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 1.5rem;
+}
+
+.availability form .flex .box{
+   flex: 1 1 20rem;
+}
+
+.availability form .flex .box p{
+   font-size: 2rem;
+   color: var(--sub-color);
+}
+
+.availability form .flex .box .input{
+   width: 100%;
+   padding: 1rem 0;
+   font-size: 1.8rem;
+   background-color: var(--main-color);
+   color: var(--white);
+   border-bottom: var(--border);
+   margin: 1rem 0;
+}
+
+.availability form .flex .box input[type="date"]::-webkit-calendar-picker-indicator{
+   filter: invert(1);
+}
+
+
+
+/* -----------------------------------reservation-------------------------------------------------- */
+.reservation form {
+   border: none; /* Remove the border for a clean look */
+   border-radius: 10px; /* Smooth rounded corners */
+   padding: 2.5rem;
+   background-color: #2e2e2e; /* Match the dark gray background */
+   max-width: 900px;
+   margin: 2rem auto; /* Center the form */
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+   color: #fff; /* White text for readability */
+}
+
+.reservation form h3 {
+   background-color: #000; /* Darker background for header */
+   color: #f5c518; /* Accent gold text color */
+   font-size: 2rem;
+   margin-bottom: 1.5rem;
+   border-radius: 8px;
+   padding: 1rem 2rem;
+   text-align: center;
+   text-transform: uppercase;
+   font-weight: 600;
+   letter-spacing: 1px;
+}
+
+.reservation form .flex .box p {
+   font-size: 1.6rem;
+   color: #f5c518; /* Match the gold accent color */
+   font-weight: 500;
+   margin-bottom: 0.5rem;
+}
+
+.reservation form .flex .box .input {
+   padding: 1rem;
+   margin: 0.5rem 0;
+   border: 1px solid #444; /* Subtle border to separate inputs */
+   border-radius: 8px;
+   background: #444; /* Slightly lighter than the form background */
+   color: #fff;
+   font-size: 1.6rem;
+   width: 100%;
+   transition: all 0.3s ease;
+}
+
+.reservation form .flex .box .input:hover,
+.reservation form .flex .box .input:focus {
+   border-color: #f5c518; /* Highlight with gold */
+   background-color: #333; /* Slightly brighter on focus */
+   outline: none;
+}
+
+.reservation form .flex .box select {
+   padding: 1rem;
+   font-size: 1.6rem;
+   border: 1px solid #444;
+   border-radius: 8px;
+   background: #444;
+   color: #fff;
+   transition: all 0.3s ease;
+}
+
+.reservation form .flex .box select:hover,
+.reservation form .flex .box select:focus {
+   border-color: #f5c518;
+   background-color: #333;
+   outline: none;
+}
+
+.reservation form button {
+   display: inline-block;
+   background: #f5c518; /* Gold button for contrast */
+   color: #000; /* Black text for visibility */
+   font-size: 1.8rem;
+   padding: 1rem 2rem;
+   border-radius: 8px;
+   margin: 2rem auto 0;
+   text-transform: uppercase;
+   font-weight: 600;
+   border: none;
+   cursor: pointer;
+   transition: all 0.3s ease;
+}
+
+.reservation form button:hover {
+   background: #fff; /* Brighter hover effect */
+   color: #000;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* -----------------------------end resertion---------------------- */
+
+
+.gallery img{
+   height: 40rem;
+   width: 60rem;
+   border-radius: .5rem;
+   object-fit: cover;
+   margin-bottom: 4rem;
+   user-select: none;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal{
+   bottom: 0;
+}
+
+.swiper-pagination-bullet{
+   background-color: var(--sub-color);
+}
+
+.swiper-pagination-bullet-active{
+   background-color: var(--white);
+}
+
+
+
+/*------------------ booking------------------- */
+.bookings .box-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Flexible and responsive grid */
+   gap: 2rem; /* Increased gap for better spacing */
+   justify-content: center;
+   align-items: flex-start;
+   padding: 2rem; /* Add padding around the grid */
+}
+
+.bookings .box-container .box {
+   border-radius: 10px; /* Smooth rounded corners */
+   padding: 2rem;
+   background-color: #2e2e2e; /* Professional dark gray background */
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+   color: #fff; /* White text for contrast */
+   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+.bookings .box-container .box:hover {
+   transform: translateY(-5px); /* Slight lift effect on hover */
+   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+
+.bookings .box-container .box p {
+   line-height: 1.6;
+   margin-bottom: 1rem; /* Add spacing between paragraphs */
+   font-size: 1.6rem;
+   color: #f5c518; /* Gold color for headings */
+   font-weight: 500;
+}
+
+.bookings .box-container .box p span {
+   color: #fff; /* White for dynamic text */
+   font-weight: 600; /* Bold text for emphasis */
+}
+
+.bookings .box-container .box button {
+   display: block;
+   width: 100%;
+   text-align: center;
+   background-color: #bf9053; /* Gold buttons for attention */
+   color: #000; /* Black text for readability */
+   font-size: 1.6rem;
+   padding: 1rem;
+   margin-top: 1rem;
+   border: none;
+   border-radius: 8px; /* Rounded button corners */
+   cursor: pointer;
+   transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+.bookings .box-container .box button:hover {
+   background-color: #fff; /* Brighter hover effect */
+   color: #000;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add hover shadow */
+}
+
+.bookings .box-container .box .cancel {
+   background-color: #d32f2f; /* Red for cancel button */
+   color: #fff;
+}
+
+.bookings .box-container .box .cancel:hover {
+   background-color: #b71c1c; /* Darker red on hover */
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ------------end booking ---------------------- */
+
+
+.footer .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+   gap: 1.5rem;
+   justify-content: center;
+   align-items: flex-start;
+   padding-bottom: 3rem;
+}
+
+.footer .box-container .box a{
+   display: block;
+   font-size: 1.8rem;
+   color: var(--sub-color);
+   padding: 1rem 0;
+}
+
+.footer .box-container .box a:hover{
+   color: var(--white);
+}
+
+.footer .box-container .box:first-child i{
+   margin-right: 1.7rem;
+}
+
+.footer .box-container .box:nth-child(2){
+   text-align: center;
+}
+
+.footer .box-container .box:last-child{
+   text-align:right;
+}
+
+.footer .box-container .box:last-child i{
+   margin-left: 1.7rem;
+}
+
+.footer .credit{
+   border-radius: .5rem;
+   padding: 2rem;
+   text-align: center;
+   color: var(--main-color);
+   background-color: var(--sub-color);
+   font-size: 2rem;
+   /* margin-bottom: 8rem; */
+}
+
+
+
+
+
+
+
+
+
+/* Adding spacing below the header */
+header {
+   
+   margin-bottom: 10rem; 
+}
+
+
+.availability {
+  
+   margin-bottom: 10rem;
+}
+.reservation {
+   margin-top: 10rem; 
+   margin-bottom: 20rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries  */
+
+@media (max-width:991px){
+
+   html{
+      font-size: 55%;
+   }
+
+   .header .flex .fa-bars{
+      display: inline-block;
+   }
+
+   .header .flex .btn{
+      display: none;
+   }
+
+   .header .navbar{
+      flex-flow: column;
+      padding: 2rem;
+      display: none;
+   }
+
+   .header .navbar.active{
+      display: flex;
+   }
+
+}
+
+@media (max-width:768px){
+
+   .home .box img{
+      height: 40vh;
+   }
+
+   .swiper-button-next,
+   .swiper-button-prev{
+      top: 35%;
+   }
+
+}
+
+@media (max-width:450px){
+
+   html{
+      font-size: 50%;
+   }
+
+   .header .flex .logo{
+      font-size: 2rem;
+   }
+
+   .home .box img{
+      height: 25rem;
+   }
+
+   .about .row .image img{
+      width: 100%;
+   }
+
+   .gallery img{
+      height: 25rem;
+      width: 30rem;
+   }
+
+   .bookings .box-container{
+      grid-template-columns: 1fr;
+   }
+
+}
+
+
+
+/*----------------------------- header---------------------------- */
+.header1 {
+   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url("../images/header1.jpg") center/cover no-repeat;
+   min-height: 100vh;
+   color: #f5c518; /* Soft gold for text contrast */
+   padding: 40px; /* Increased padding for better spacing */
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.head-top {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+   max-width: 1200px; /* Limit width for larger screens */
+   margin-bottom: 30px;
+}
+
+.head-top span {
+   cursor: pointer;
+   letter-spacing: 2px;
+   font-size: 18px;
+   font-weight: 600;
+   transition: all 0.3s ease;
+}
+
+.head-top span:hover {
+   color: #d4b588; /* Accent color on hover */
+}
+
+.head-bottom {
+   text-align: center;
+   max-width: 800px; /* Limit text width for better readability */
+   margin: 0 auto;
+}
+
+.head-bottom h2 {
+   padding: 30px 0;
+   font-size: 50px;
+   font-weight: 700;
+   color: #fff;
+   border-bottom: 2px solid #bf9053;
+   letter-spacing: 2px;
+   margin-bottom: 20px;
+}
+
+.head-bottom p {
+   opacity: 0.8;
+   font-size: 22px;
+   margin: 30px auto;
+   line-height: 1.6;
+   width: 70%;
+   color: #fff;
+}
+
+.head-btn {
+   font-size: 20px;
+   font-weight: 600;
+   padding: 15px 25px;
+   border-radius: 8px;
+   border: 2px solid #bf9053;
+   background: rgba(0, 0, 0, 0.6); /* Dark transparent background for the button */
+   color: #fff;
+   cursor: pointer;
+   transition: background-color 0.3s ease, color 0.3s ease;
+   margin-top: 30px; /* Space above the button */
+}
+
+.head-btn:hover {
+   background: transparent;
+   color: #bf9053;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle hover effect */
+}
+
+@media(max-width: 768px) {
+   .head-bottom h2 {
+       font-size: 36px; /* Adjust font size for smaller screens */
+   }
+   .head-bottom p {
+       font-size: 18px; /* Adjust paragraph size */
+       width: 85%;
+   }
+   .head-btn {
+       font-size: 18px;
+       padding: 12px 20px; /* Smaller button on mobile */
+   }
+}
+
+@media(max-width: 500px) {
+   .head-bottom h2 {
+       font-size: 28px;
+   }
+   .head-bottom p {
+       font-size: 16px;
+       margin: 20px auto;
+   }
+   .head-btn {
+       font-size: 16px;
+       padding: 10px 18px;
+   }
+}
+
+
+
+
+
+
+
+
+/* messeagses */
+/* 
+.swal-success {
+   background-color: #28a745 !important; 
+}
+
+.swal-warning {
+   background-color: #ffc107 !important;
+}
+
+.swal-info {
+   background-color: #17a2b8 !important; 
+}
+
+.swal-error {
+   background-color: #dc3545 !important; 
+}
+
+.swal-icon {
+   font-size: 50px !important; 
+}
+
+.swal-title {
+   font-size: 24px; 
+   font-weight: bold;
+}
+
+.swal-text {
+   font-size: 16px; 
+
+
+} */
+
+
+
+
+
+
+
+/* room */
+.rooms {
+   margin: 40px auto; /* Center the rooms section */
+   max-width: 1200px; /* Restrict maximum width for better alignment */
+   padding: 20px;
+}
+
+.room {
+   margin: 20px auto; /* Adjust spacing between rooms */
+   padding: 20px;
+   background: #333; /* Slightly lighter black for a softer look */
+   color: #fff;
+   border-radius: 10px; /* Add subtle rounding to the corners */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+   overflow: hidden;
+   display: flex; /* Use flexbox for structured layout */
+   align-items: center;
+   gap: 20px; /* Space between image and text */
+}
+
+.room-text {
+   padding: 10px 20px;
+}
+
+.room-text h3 {
+   font-size: 28px; /* Slightly larger for prominence */
+   margin-bottom: 10px;
+}
+
+.room-text ul {
+   list-style-type: none;
+   margin: 15px 0;
+   padding: 0;
+}
+
+.room-text ul li {
+   padding: 7px 0;
+   font-size: 16px; /* Adjust font size for readability */
+}
+
+.room-text ul li i {
+   color: var(--yellow);
+   margin-right: 10px;
+}
+
+.rate {
+   opacity: 0.9; /* Improve visibility */
+}
+
+.rate span {
+   font-size: 36px; /* Adjust font size for balance */
+   font-weight: 700; /* Softer boldness */
+   color: var(--yellow);
+}
+
+.room-image {
+   flex: 1; /* Ensure image occupies balanced space */
+   overflow: hidden;
+   max-height: 200px; /* Restrict maximum height */
+   border-radius: 10px; /* Match the room card's border-radius */
+}
+
+.room-image img {
+   transition: transform 0.3s ease-in-out;
+   width: 100%;
+   height: 100%;
+   object-fit: cover; /* Ensure proper scaling */
+}
+
+.room-image:hover img {
+   transform: scale(1.05); /* Subtle zoom effect */
+}
+
+@media (min-width: 900px) {
+   .rooms-container {
+       display: grid; /* Use grid for modern layouts */
+       grid-template-columns: repeat(2, 1fr);
+       gap: 20px;
+   }
+}
+
+@media (min-width: 1370px) {
+   .rooms-container {
+       display: grid;
+       grid-template-columns: repeat(3, 1fr);
+       gap: 20px; /* Consistent spacing for larger screens */
+   }
+   .room {
+       margin: 0 auto;
+       flex-direction: column; /* Use column layout for larger screens */
+       align-items: center;
+   }
+   .room:nth-child(even) {
+       flex-direction: column-reverse; /* Alternate layout for variety */
+   }
+}
+
+
+
+/* in booking */
+.grand-total {
+   background-color: var(--sub-color);
+   padding: 20px;
+   margin-top: 20px;
+   text-align: center;
+   border-radius: 8px;
+   border: 1px solid var(--border);
+   font-size: 1.5rem;
+   font-weight: bold;
+   color: #333;
+   
+}
+.grand-total h2{
+   color:var(--white)
+}
+
+
+/* booked rooms */
+
+.booked-rooms {
+    padding: 40px;
+    text-align: center;
+}
+
+#calendar {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+/*------------------------- message design--------------------------------- */
+/* .messages {
+   max-width: 1200px;
+   margin: 20px auto;
+   padding: 0 20px;
+}
+
+.warning-msg,
+.success-msg {
+   padding: 15px;
+   margin-bottom: 10px;
+   border-radius: 5px;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+.warning-msg {
+   background-color: #fff3cd;
+   border: 1px solid #ffeeba;
+   color: #856404;
+}
+
+.success-msg {
+   background-color: #d4edda;
+   border: 1px solid #c3e6cb;
+   color: #155724;
+}
+
+.warning-msg i,
+.success-msg i {
+   font-size: 1.2em;
+}
+
+.warning-msg span,
+.success-msg span {
+   flex-grow: 1;
+}
+
+.warning-msg i:last-child,
+.success-msg i:last-child {
+   cursor: pointer;
+}
+ */
+
+
+
+/* 
