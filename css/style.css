@@ -43,7 +43,7 @@ html{
 
 body{
    background-color: var(--main-color);
-   /* padding-bottom: 7.5rem; */
+ 
 }
 
 section{
@@ -79,18 +79,18 @@ section{
    font-size: 1.6rem;
    font-weight: 500;
    color: var(--sub-color);
-   margin-right: 20px; /* Add spacing before the logout button */
+   margin-right: 20px; 
 }
 .header {
-   padding: 10px 20px; /* Adjust padding for a clean look */
-   background-color: var(--main-color); /* Ensure consistent background color */
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-   position: sticky; /* Keep header at the top */
+   padding: 10px 20px; 
+   background-color: var(--main-color);
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+   position: sticky; 
    top: 0;
-   z-index: 1000; /* Ensure it stays above other elements */
-   display: flex; /* Use flexbox for alignment */
-   justify-content: space-between; /* Space between logout and nav */
-   align-items: center; /* Center items vertically */
+   z-index: 1000; 
+   display: flex; 
+   justify-content: space-between; 
+   align-items: center;
 }
 
 .header .flex {
@@ -99,7 +99,7 @@ section{
    gap: 1.5rem;
    max-width: 1200px;
    width: 100%;
-   margin: 0 auto; /* Center content within header */
+   margin: 0 auto; 
 }
 
 .header .logo {
@@ -129,25 +129,25 @@ section{
 }
 
 .header .logout {
-   margin-left: 0; /* Align the logout button to the left */
+   margin-left: 0; 
    font-size: 1.6rem;
    font-weight: 500;
    color: var(--main-color);
    background-color: var(--sub-color);
    padding: 0.7rem 1.5rem;
    border-radius: 5px;
-   text-decoration: none; /* Remove underline */
+   text-decoration: none;
    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .header .logout:hover {
-   background-color: var(--white); /* Change background on hover */
+   background-color: var(--white); 
    color: var(--sub-color);
 }
 
 @media (max-width: 768px) {
    .header {
-       flex-direction: column; /* Stack elements vertically on smaller screens */
+       flex-direction: column; 
    }
    .header .navbar {
        flex-direction: column;
@@ -155,28 +155,28 @@ section{
        align-items: center;
    }
    .header .logout {
-       margin: 10px 0; /* Add margin for spacing in mobile view */
+       margin: 10px 0;
    }
 }
 .header .fa-bars {
    font-size: 2.5rem;
    cursor: pointer;
    color: var(--sub-color);
-   display: none; /* Hidden by default */
+   display: none;
 }
 
 @media (max-width: 768px) {
    .header .fa-bars {
-       display: block; /* Show menu button only on smaller screens */
-       margin-left: auto; /* Align it to the right */
+       display: block; 
+       margin-left: auto; 
    }
 
    .header .navbar {
-       display: none; /* Hide the navigation links on mobile by default */
+       display: none; 
        flex-direction: column;
        gap: 1rem;
        position: absolute;
-       top: 100%; /* Below the header */
+       top: 100%; 
        left: 0;
        right: 0;
        background-color: var(--main-color);
@@ -185,15 +185,10 @@ section{
    }
 
    .header .navbar.active {
-       display: flex; /* Show navbar when active (e.g., toggled by JavaScript) */
+       display: flex;
    }
 }
-
-
-
-
-
-/* end of header */
+/*----------- end of header -----------*/
 
 
 
@@ -247,24 +242,18 @@ section{
    opacity: 1;
 }
 
-/* .availability form h1{
-   color: var(--white);
-   padding-top: 100px;
-   padding: 2rem 0;
-   
-} */
 .availability {
    display: flex;
-   justify-content: center; /* Center the form horizontally */
+   justify-content: center; 
    align-items: center;
-   margin-top: 5rem; /* Adjust spacing above the section */
-   margin-bottom: 10rem; /* Adjust spacing below the section */
+   margin-top: 5rem; 
+   margin-bottom: 10rem; 
 }
 
 .availability form {
-   max-width: 600px; /* Set a max width for the form */
-   width: 100%; /* Make form responsive */
-   margin: 0 auto; /* Center the form within the section */
+   max-width: 600px; 
+   width: 100%;
+   margin: 0 auto; 
    border: var(--border);
    padding: 2rem;
 }
@@ -311,21 +300,21 @@ section{
 
 
 
-/* -----------------------------------reservation-------------------------------------------------- */
+/* ---------------------reservation------------------------------------- */
 .reservation form {
-   border: none; /* Remove the border for a clean look */
-   border-radius: 10px; /* Smooth rounded corners */
+   border: none; 
+   border-radius: 10px; 
    padding: 2.5rem;
-   background-color: #2e2e2e; /* Match the dark gray background */
+   background-color: #2e2e2e;
    max-width: 900px;
-   margin: 2rem auto; /* Center the form */
-   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
-   color: #fff; /* White text for readability */
+   margin: 2rem auto; 
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+   color: #fff; 
 }
 
 .reservation form h3 {
-   background-color: #000; /* Darker background for header */
-   color: #f5c518; /* Accent gold text color */
+   background-color: #000; 
+   color: #f5c518; 
    font-size: 2rem;
    margin-bottom: 1.5rem;
    border-radius: 8px;
@@ -338,7 +327,7 @@ section{
 
 .reservation form .flex .box p {
    font-size: 1.6rem;
-   color: #f5c518; /* Match the gold accent color */
+   color: #f5c518; 
    font-weight: 500;
    margin-bottom: 0.5rem;
 }
@@ -346,9 +335,9 @@ section{
 .reservation form .flex .box .input {
    padding: 1rem;
    margin: 0.5rem 0;
-   border: 1px solid #444; /* Subtle border to separate inputs */
+   border: 1px solid #444; 
    border-radius: 8px;
-   background: #444; /* Slightly lighter than the form background */
+   background: #444; 
    color: #fff;
    font-size: 1.6rem;
    width: 100%;
@@ -357,8 +346,8 @@ section{
 
 .reservation form .flex .box .input:hover,
 .reservation form .flex .box .input:focus {
-   border-color: #f5c518; /* Highlight with gold */
-   background-color: #333; /* Slightly brighter on focus */
+   border-color: #f5c518; 
+   background-color: #333; 
    outline: none;
 }
 
@@ -381,8 +370,8 @@ section{
 
 .reservation form button {
    display: inline-block;
-   background: #f5c518; /* Gold button for contrast */
-   color: #000; /* Black text for visibility */
+   background: #f5c518; 
+   color: #000;
    font-size: 1.8rem;
    padding: 1rem 2rem;
    border-radius: 8px;
@@ -395,7 +384,7 @@ section{
 }
 
 .reservation form button:hover {
-   background: #fff; /* Brighter hover effect */
+   background: #fff; 
    color: #000;
    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -403,94 +392,73 @@ section{
 /* -----------------------------end resertion---------------------- */
 
 
-.gallery img{
-   height: 40rem;
-   width: 60rem;
-   border-radius: .5rem;
-   object-fit: cover;
-   margin-bottom: 4rem;
-   user-select: none;
-}
-
-.swiper-pagination-bullets.swiper-pagination-horizontal{
-   bottom: 0;
-}
-
-.swiper-pagination-bullet{
-   background-color: var(--sub-color);
-}
-
-.swiper-pagination-bullet-active{
-   background-color: var(--white);
-}
-
 
 
 /*------------------ booking------------------- */
 .bookings .box-container {
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Flexible and responsive grid */
-   gap: 2rem; /* Increased gap for better spacing */
+   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+   gap: 2rem; 
    justify-content: center;
    align-items: flex-start;
-   padding: 2rem; /* Add padding around the grid */
+   padding: 2rem; 
 }
 
 .bookings .box-container .box {
-   border-radius: 10px; /* Smooth rounded corners */
+   border-radius: 10px; 
    padding: 2rem;
-   background-color: #2e2e2e; /* Professional dark gray background */
-   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-   color: #fff; /* White text for contrast */
-   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+   background-color: #2e2e2e; 
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+   color: #fff; 
+   transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .bookings .box-container .box:hover {
-   transform: translateY(-5px); /* Slight lift effect on hover */
-   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+   transform: translateY(-5px); 
+   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 .bookings .box-container .box p {
    line-height: 1.6;
-   margin-bottom: 1rem; /* Add spacing between paragraphs */
+   margin-bottom: 1rem; 
    font-size: 1.6rem;
-   color: #f5c518; /* Gold color for headings */
+   color: #f5c518; 
    font-weight: 500;
 }
 
 .bookings .box-container .box p span {
-   color: #fff; /* White for dynamic text */
-   font-weight: 600; /* Bold text for emphasis */
+   color: #fff; 
+   font-weight: 600; 
 }
 
 .bookings .box-container .box button {
    display: block;
    width: 100%;
    text-align: center;
-   background-color: #bf9053; /* Gold buttons for attention */
-   color: #000; /* Black text for readability */
+   background-color: #bf9053; 
+   color: #000; 
    font-size: 1.6rem;
    padding: 1rem;
    margin-top: 1rem;
    border: none;
-   border-radius: 8px; /* Rounded button corners */
+   border-radius: 8px; 
    cursor: pointer;
-   transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+   transition: background-color 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .bookings .box-container .box button:hover {
-   background-color: #fff; /* Brighter hover effect */
+   background-color: #fff;
    color: #000;
-   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add hover shadow */
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .bookings .box-container .box .cancel {
-   background-color: #d32f2f; /* Red for cancel button */
+   background-color: #d32f2f; 
    color: #fff;
 }
 
 .bookings .box-container .box .cancel:hover {
-   background-color: #b71c1c; /* Darker red on hover */
+   background-color: #b71c1c; 
    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -540,7 +508,7 @@ section{
    color: var(--main-color);
    background-color: var(--sub-color);
    font-size: 2rem;
-   /* margin-bottom: 8rem; */
+  
 }
 
 
@@ -551,7 +519,7 @@ section{
 
 
 
-/* Adding spacing below the header */
+/* -------------Adding spacing below the header------- */
 header {
    
    margin-bottom: 10rem; 
@@ -655,12 +623,12 @@ header {
 
 
 
-/*----------------------------- header---------------------------- */
+/*----------------------------- header1---------------------------- */
 .header1 {
    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url("../images/header1.jpg") center/cover no-repeat;
    min-height: 100vh;
-   color: #f5c518; /* Soft gold for text contrast */
-   padding: 40px; /* Increased padding for better spacing */
+   color: #f5c518; 
+   padding: 40px; 
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -672,7 +640,7 @@ header {
    justify-content: space-between;
    align-items: center;
    width: 100%;
-   max-width: 1200px; /* Limit width for larger screens */
+   max-width: 1200px; 
    margin-bottom: 30px;
 }
 
@@ -685,12 +653,12 @@ header {
 }
 
 .head-top span:hover {
-   color: #d4b588; /* Accent color on hover */
+   color: #d4b588; 
 }
 
 .head-bottom {
    text-align: center;
-   max-width: 800px; /* Limit text width for better readability */
+   max-width: 800px; 
    margin: 0 auto;
 }
 
@@ -719,30 +687,30 @@ header {
    padding: 15px 25px;
    border-radius: 8px;
    border: 2px solid #bf9053;
-   background: rgba(0, 0, 0, 0.6); /* Dark transparent background for the button */
+   background: rgba(0, 0, 0, 0.6); 
    color: #fff;
    cursor: pointer;
    transition: background-color 0.3s ease, color 0.3s ease;
-   margin-top: 30px; /* Space above the button */
+   margin-top: 30px; 
 }
 
 .head-btn:hover {
    background: transparent;
    color: #bf9053;
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle hover effect */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
 }
 
 @media(max-width: 768px) {
    .head-bottom h2 {
-       font-size: 36px; /* Adjust font size for smaller screens */
+       font-size: 36px; 
    }
    .head-bottom p {
-       font-size: 18px; /* Adjust paragraph size */
+       font-size: 18px; 
        width: 85%;
    }
    .head-btn {
        font-size: 18px;
-       padding: 12px 20px; /* Smaller button on mobile */
+       padding: 12px 20px; 
    }
 }
 
@@ -767,63 +735,27 @@ header {
 
 
 
-/* messeagses */
-/* 
-.swal-success {
-   background-color: #28a745 !important; 
-}
-
-.swal-warning {
-   background-color: #ffc107 !important;
-}
-
-.swal-info {
-   background-color: #17a2b8 !important; 
-}
-
-.swal-error {
-   background-color: #dc3545 !important; 
-}
-
-.swal-icon {
-   font-size: 50px !important; 
-}
-
-.swal-title {
-   font-size: 24px; 
-   font-weight: bold;
-}
-
-.swal-text {
-   font-size: 16px; 
-
-
-} */
 
 
 
-
-
-
-
-/* room */
+/*--------------- room---------------- */
 .rooms {
-   margin: 40px auto; /* Center the rooms section */
-   max-width: 1200px; /* Restrict maximum width for better alignment */
+   margin: 40px auto; 
+   max-width: 1200px; 
    padding: 20px;
 }
 
 .room {
-   margin: 20px auto; /* Adjust spacing between rooms */
+   margin: 20px auto; 
    padding: 20px;
-   background: #333; /* Slightly lighter black for a softer look */
+   background: #333;
    color: #fff;
-   border-radius: 10px; /* Add subtle rounding to the corners */
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+   border-radius: 10px; 
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
    overflow: hidden;
-   display: flex; /* Use flexbox for structured layout */
+   display: flex; 
    align-items: center;
-   gap: 20px; /* Space between image and text */
+   gap: 20px; 
 }
 
 .room-text {
@@ -831,7 +763,7 @@ header {
 }
 
 .room-text h3 {
-   font-size: 28px; /* Slightly larger for prominence */
+   font-size: 28px; 
    margin-bottom: 10px;
 }
 
@@ -843,7 +775,7 @@ header {
 
 .room-text ul li {
    padding: 7px 0;
-   font-size: 16px; /* Adjust font size for readability */
+   font-size: 16px; 
 }
 
 .room-text ul li i {
@@ -852,36 +784,36 @@ header {
 }
 
 .rate {
-   opacity: 0.9; /* Improve visibility */
+   opacity: 0.9; 
 }
 
 .rate span {
-   font-size: 36px; /* Adjust font size for balance */
-   font-weight: 700; /* Softer boldness */
+   font-size: 36px; 
+   font-weight: 700; 
    color: var(--yellow);
 }
 
 .room-image {
-   flex: 1; /* Ensure image occupies balanced space */
+   flex: 1;
    overflow: hidden;
-   max-height: 200px; /* Restrict maximum height */
-   border-radius: 10px; /* Match the room card's border-radius */
+   max-height: 200px; 
+   border-radius: 10px; 
 }
 
 .room-image img {
    transition: transform 0.3s ease-in-out;
    width: 100%;
    height: 100%;
-   object-fit: cover; /* Ensure proper scaling */
+   object-fit: cover;
 }
 
 .room-image:hover img {
-   transform: scale(1.05); /* Subtle zoom effect */
+   transform: scale(1.05);
 }
 
 @media (min-width: 900px) {
    .rooms-container {
-       display: grid; /* Use grid for modern layouts */
+       display: grid; 
        grid-template-columns: repeat(2, 1fr);
        gap: 20px;
    }
@@ -891,21 +823,21 @@ header {
    .rooms-container {
        display: grid;
        grid-template-columns: repeat(3, 1fr);
-       gap: 20px; /* Consistent spacing for larger screens */
+       gap: 20px; 
    }
    .room {
        margin: 0 auto;
-       flex-direction: column; /* Use column layout for larger screens */
+       flex-direction: column;
        align-items: center;
    }
    .room:nth-child(even) {
-       flex-direction: column-reverse; /* Alternate layout for variety */
+       flex-direction: column-reverse; 
    }
 }
 
 
 
-/* in booking */
+/* -----------------in booking -------------*/
 .grand-total {
    background-color: var(--sub-color);
    padding: 20px;
@@ -923,7 +855,7 @@ header {
 }
 
 
-/* booked rooms */
+/* --------------------booked rooms--------------- */
 
 .booked-rooms {
     padding: 40px;
@@ -940,52 +872,107 @@ header {
 
 
 
-
-/*------------------------- message design--------------------------------- */
-/* .messages {
-   max-width: 1200px;
-   margin: 20px auto;
-   padding: 0 20px;
+/*----------------- notification------------------- */
+.swal-success {
+   background-color: #28a745 !important;
 }
 
-.warning-msg,
-.success-msg {
-   padding: 15px;
-   margin-bottom: 10px;
-   border-radius: 5px;
+.swal-warning {
+   background-color: #ffc107 !important;
+}
+
+.swal-info {
+   background-color: #17a2b8 !important;
+}
+
+.swal-error {
+   background-color: #dc3545 !important;
+}
+
+.swal-icon {
+   font-size: 50px !important;
+}
+
+.swal-title {
+   font-size: 24px;
+   font-weight: bold;
+}
+
+.swal-text {
+   font-size: 16px;
+}
+
+.swal2-popup {
+   border-radius: 15px !important;
+}
+
+.swal2-confirm {
+   padding: 0.5rem 2rem !important;
+   font-size: 1.4rem !important;
+}
+
+
+/* -----------------end--------------- */
+
+
+ /*---------------- Tabs and date filter ------------------*/
+ .tabs {
    display: flex;
-   align-items: center;
-   gap: 10px;
+   margin-bottom: 20px;
 }
-
-.warning-msg {
-   background-color: #fff3cd;
-   border: 1px solid #ffeeba;
-   color: #856404;
-}
-
-.success-msg {
-   background-color: #d4edda;
-   border: 1px solid #c3e6cb;
-   color: #155724;
-}
-
-.warning-msg i,
-.success-msg i {
-   font-size: 1.2em;
-}
-
-.warning-msg span,
-.success-msg span {
-   flex-grow: 1;
-}
-
-.warning-msg i:last-child,
-.success-msg i:last-child {
+.tab-button {
+   display: inline-block;
    cursor: pointer;
+   padding: 1rem 3rem;
+   border: var(--border);
+   font-size: 1.8rem;
+   color: var(--sub-color);
+   text-align: center;
+   text-transform: capitalize;
+   transition: .2s linear;
+   margin-top: 1rem;
+   background-color: var(--main-color);
 }
- */
+.tab-button.active {
+   border-radius: 5rem;
+   background-color: var(--sub-color);
+   color: var(--main-color);
+}
+.tab-content {
+   display: none;
+}
+.tab-content.active {
+   display: block;
+}
+.date-filter {
+   margin-bottom: 20px;
+}
+.date-filter input {
+   margin-right: 10px;
+   padding: 5px;
+}
+
+/*-------------------- end-=------------------- */
 
 
+/*-------------- ratings------------ */
+.rating-stars {
+   margin-top: 10px;
+}
 
-/* 
+.rating-stars .fa-star {
+   color: #ccc;
+   font-size: 1.8rem;
+}
+
+.rating-stars .fa-star.active {
+   color: #ffd700;
+}
+
+select[name="rating"] {
+   padding: 0.5rem;
+   font-size: 1.6rem;
+   margin: 1rem 0;
+   width: 200px;
+}
+/*------------------ end------------ */

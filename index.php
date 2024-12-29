@@ -119,6 +119,7 @@ if(isset($_POST['send'])){
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" type="image/jpg" href="images/logo.jpg">
    <title>M Ashley Suites</title>
 
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
@@ -236,7 +237,7 @@ if(isset($_POST['send'])){
 
 
 
-<?php include 'components/footer.php'; ?>
+
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
@@ -247,6 +248,6 @@ if(isset($_POST['send'])){
 
 <?php include 'components/message.php'; ?>
 
-<?php include 'footer.php'; ?>
+<?php include 'components/footer.php'; ?>
 </body>
 </html>

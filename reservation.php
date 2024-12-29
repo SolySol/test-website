@@ -97,47 +97,12 @@ if (isset($_GET['success']) && $_GET['success'] == 1) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/jpg" href="images/logo.jpg">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
-        .swal-success {
-            background-color: #28a745 !important;
-        }
-
-        .swal-warning {
-            background-color: #ffc107 !important;
-        }
-
-        .swal-info {
-            background-color: #17a2b8 !important;
-        }
-
-        .swal-error {
-            background-color: #dc3545 !important;
-        }
-
-        .swal-icon {
-            font-size: 50px !important;
-        }
-
-        .swal-title {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .swal-text {
-            font-size: 16px;
-        }
-
-        .swal2-popup {
-            border-radius: 15px !important;
-        }
-
-        .swal2-confirm {
-            padding: 0.5rem 2rem !important;
-            font-size: 1.4rem !important;
-        }
+        
     </style>
 </head>
 <body>
@@ -177,7 +142,6 @@ if (isset($_GET['success']) && $_GET['success'] == 1) {
     </form>
 </section>
 
-<?php include 'components/footer.php'; ?>
 
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script>

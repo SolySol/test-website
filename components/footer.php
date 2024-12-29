@@ -1,38 +1,50 @@
-<!-- footer section starts  -->
+<footer style="background-color: #2c3e50; color: white; padding: 20px 0; font-family: Arial, sans-serif;">
+  <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
+    <!-- Company Info -->
+    <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+      <h4 style="color: #f39c12; font-size: 18px; margin-bottom: 10px;">M Ashley Suites</h4>
+      <p>We offer strict safety and sanitation measures while you are in the Hustle and Bustle of the City</p>
 
-<section class="footer">
+    </div>
+      
 
-   <!-- <div class="box-container">
 
-      <div class="box">
-         <a href="tel:1234567890"><i class="fas fa-phone"></i> +123-456-7890</a>
-         <a href="tel:1112223333"><i class="fas fa-phone"></i> +111-222-3333</a>
-         <a href="mailto:shakhanas@gmail.com"><i class="fas fa-envelope"></i> shakhanas@gmail.com</a>
-         <a href="mailto:anasbhai@gmail.com"><i class="fas fa-envelope"></i> anasbhai@gmail.com</a>
-         <a href="#"><i class="fas fa-map-marker-alt"></i> mumbai, india - 400104</a>
+    <!-- Quick Links -->
+    <!-- <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+      <h4 style="color: #f39c12; font-size: 18px; margin-bottom: 10px;">Quick Links</h4>
+      <ul style="list-style: none; padding: 0; line-height: 1.8;">
+        <li><a href="/about" style="color: white; text-decoration: none;">About Us</a></li>
+        <li><a href="/rooms" style="color: white; text-decoration: none;">Rooms & Suites</a></li>
+        <li><a href="/offers" style="color: white; text-decoration: none;">Special Offers</a></li>
+        <li><a href="/contact" style="color: white; text-decoration: none;">Contact Us</a></li>
+      </ul>
+    </div> -->
+    
+    <!-- Contact Info -->
+    <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+      <h4 style="color: #f39c12; font-size: 18px; margin-bottom: 10px;">Contact Us</h4>
+      <p><i class="fas fa-phone" style="margin-right: 8px;"></i> 0915 319 2315</p>
+      <p><i class="fas fa-envelope" style="margin-right: 8px;"></i> m.ashleysuites21@gmail.com</p>
+      <p><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Consunji St., Iligan City, Philippines</p>
+    </div>
+    
+    <!-- Social Media Links -->
+    <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+      <h4 style="color: #f39c12; font-size: 18px; margin-bottom: 10px;">Follow Us</h4>
+      <div style="display: flex; gap: 10px;">
+        <a href="https://www.facebook.com/mashleysuites/" target="_blank" style="color: white; text-decoration: none;">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <!-- <a href="https://twitter.com" target="_blank" style="color: white; text-decoration: none;">
+          <i class="fab fa-twitter"></i>
+        </a> -->
+        <a href="https://www.instagram.com/explore/locations/103430948729039/m-ashley-suites/" target="_blank" style="color: white; text-decoration: none;">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://promoteiligan.com/tag/m-ashley-suites-iligan/" target="_blank" style="color: white; text-decoration: none;">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
       </div>
-
-      <div class="box">
-         <a href="#home">home</a>
-         <a href="#about">about</a>
-         <a href="bookings.php">my bookings</a>
-         <a href="#reservation">reservation</a>
-         <a href="#gallery">gallery</a>
-         <a href="#contact">contact</a>
-         <a href="#reviews">reviews</a>
-      </div>
-
-      <div class="box">
-         <a href="#">facebook <i class="fab fa-facebook-f"></i></a>
-         <a href="#">twitter <i class="fab fa-twitter"></i></a>
-         <a href="#">instagram <i class="fab fa-instagram"></i></a>
-         <a href="#">linkedin <i class="fab fa-linkedin"></i></a>
-         <a href="#">youtube <i class="fab fa-youtube"></i></a>
-      </div>
-
-   </div> -->
-
-
-</section>
-
-<!-- footer section ends -->
+    </div>
+  </div>
+</footer>

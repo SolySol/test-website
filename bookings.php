@@ -187,106 +187,9 @@ $paid_result = $paid_reservations->get_result();
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    
+    <link rel="icon" type="image/jpg" href="images/logo.jpg">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <style>
-        /* Tabs styling */
-        .tabs {
-            display: flex;
-            margin-bottom: 20px;
-        }
-        .tab-button {
-            display: inline-block;
-            cursor: pointer;
-            padding: 1rem 3rem;
-            border: var(--border);
-            font-size: 1.8rem;
-            color: var(--sub-color);
-            text-align: center;
-            text-transform: capitalize;
-            transition: .2s linear;
-            margin-top: 1rem;
-            background-color: var(--main-color);
-        }
-        .tab-button.active {
-            border-radius: 5rem;
-            background-color: var(--sub-color);
-            color: var(--main-color);
-        }
-        .tab-content {
-            display: none;
-        }
-        .tab-content.active {
-            display: block;
-        }
-        .date-filter {
-            margin-bottom: 20px;
-        }
-        .date-filter input {
-            margin-right: 10px;
-            padding: 5px;
-        }
-
-        <style>
-        .swal-success {
-            background-color: #28a745 !important;
-        }
-
-        .swal-warning {
-            background-color: #ffc107 !important;
-        }
-
-        .swal-info {
-            background-color: #17a2b8 !important;
-        }
-
-        .swal-error {
-            background-color: #dc3545 !important;
-        }
-
-        .swal-icon {
-            font-size: 50px !important;
-        }
-
-        .swal-title {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .swal-text {
-            font-size: 16px;
-        }
-
-        .swal2-popup {
-            border-radius: 15px !important;
-        }
-
-        .swal2-confirm {
-            padding: 0.5rem 2rem !important;
-            font-size: 1.4rem !important;
-        }
-
-                .rating-stars {
-            margin-top: 10px;
-        }
-
-        .rating-stars .fa-star {
-            color: #ccc;
-            font-size: 1.8rem;
-        }
-
-        .rating-stars .fa-star.active {
-            color: #ffd700;
-        }
-
-        select[name="rating"] {
-            padding: 0.5rem;
-            font-size: 1.6rem;
-            margin: 1rem 0;
-            width: 200px;
-        }
-    </style>
-    </style>
+   
 </head>
 <body data-active="<?= htmlspecialchars($active_tab); ?>">
 
@@ -423,7 +326,7 @@ $paid_result = $paid_reservations->get_result();
     </div>
 </section>
 
-<?php include 'components/footer.php'; ?>
+
 
 <script>
     // Tab functionality

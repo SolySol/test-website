@@ -47,80 +47,12 @@ if (isset($_POST['update_status'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bookings</title>
-    
+    <link rel="icon" type="image/jpg" href="images/logo.jpg">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/admin_style.css">
 
-    <style>
-        /* Reset and base styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Roboto', sans-serif;
-        }
-
-        body {
-            background-color: #1E1E1E;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        .user-details {
-            margin-bottom: 1rem;
-            padding: 0.5rem;
-            background-color: #f9f9f9;
-            border-radius: 5px;
-        }
-
-        .user-details p {
-            margin: 0.2rem 0;
-            font-size: 14px;
-        }
-
-        /* Search box styles */
-        .search-section {
-            margin-bottom: 2rem;
-            width: 100%;
-            max-width: 600px;
-        }
-
-        .search-box {
-            display: flex;
-            align-items: center;
-            background: #fff;
-            border-radius: 8px;
-            padding: 0.5rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .search-input {
-            flex: 1;
-            padding: 0.8rem;
-            border: none;
-            outline: none;
-            font-size: 15px;
-            background: transparent;
-        }
-
-        .search-button {
-            background: none;
-            border: none;
-            padding: 0.5rem 1rem;
-            cursor: pointer;
-            color: #666;
-        }
-
-        .search-button:hover {
-            color: #333;
-        }
-
-        .booking-card.hidden {
-            display: none;
-        }
-    </style>
 </head>
 <body>
     <?php include 'admin_header.php'; ?>

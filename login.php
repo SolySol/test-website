@@ -92,33 +92,8 @@ if (isset($_POST['login-btn'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="login.css">
-    <style>
-        .nav-button .home-btn {
-            background: transparent;
-            border: 2px solid #fff;
-            color: #fff;
-            padding: 8px 20px;
-            border-radius: 20px;
-            cursor: pointer;
-            margin-right: 15px;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            font-size: 14px;
-        }
-
-        .nav-button .home-btn:hover {
-            background: #fff;
-            color: #1B1B1B;
-        }
-
-        .nav-button .home-btn i {
-            margin-right: 5px;
-            font-size: 16px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="icon" type="image/jpg" href="images/logo.jpg">
     <title>Login | Registration</title>
 </head>
 <body>
