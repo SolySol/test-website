@@ -174,7 +174,9 @@ if(isset($_POST['send'])){
 
 <!-- Rooms Section -->
 <section class="rooms sec-width" id="rooms">
-    <div class="title"><h2>Rooms</h2></div>
+    <div class="title">
+        <h2>Our Luxury Rooms</h2>  <!-- Added "Our Luxury" to make it more professional -->
+    </div>
     <div class="rooms-container">
         <!-- Suite Room -->
         <article class="room">

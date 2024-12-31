@@ -770,15 +770,15 @@ label {
 
 .dashboard {
    padding: 2rem;
-   background-color: var(--secondary-color);
+   background-color: #1E1E1E;
 }
 
 .heading {
    font-size: 2rem;
-   color: var(--text-dark);
+   color: white;
    margin-bottom: 2rem;
    padding-bottom: 1rem;
-   border-bottom: 2px solid var(--primary-color);
+   border-bottom: 2px solid white;
 }
 
 .box-container {

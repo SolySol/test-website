@@ -3,7 +3,7 @@ include 'components/connect.php';
 
 session_start();
 
-date_default_timezone_set('Asia/Manila'); // Set timezone to Philippine time
+date_default_timezone_set('Asia/Manila');
 
 if (isset($_SESSION['user_id'])) {
     $user_id = $_SESSION['user_id'];
@@ -20,7 +20,6 @@ if (isset($_POST['submit_rating'])) {
     $reservation_id = filter_var($_POST['reservation_id'], FILTER_SANITIZE_NUMBER_INT);
     $rating = filter_var($_POST['rating'], FILTER_SANITIZE_NUMBER_INT);
 
-    // Validate rating value
     if ($rating >= 1 && $rating <= 5) {
         $update_rating = $conn->prepare("UPDATE reservations SET rating = ? WHERE id = ? AND user_id = ?");
         $update_rating->bind_param("iii", $rating, $reservation_id, $user_id);
@@ -189,7 +188,6 @@ $paid_result = $paid_reservations->get_result();
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/jpg" href="images/logo.jpg">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-   
 </head>
 <body data-active="<?= htmlspecialchars($active_tab); ?>">
 
@@ -197,20 +195,6 @@ $paid_result = $paid_reservations->get_result();
 
 <section class="bookings">
     <h1 class="heading">My Bookings</h1>
-
-    <!-- Success/Warning Messages -->
-    <?php
-    if (!empty($success_msg)) {
-        foreach ($success_msg as $message) {
-            echo '<div class="success-msg">' . htmlspecialchars($message) . '</div>';
-        }
-    }
-    if (!empty($warning_msg)) {
-        foreach ($warning_msg as $message) {
-            echo '<div class="warning-msg">' . htmlspecialchars($message) . '</div>';
-        }
-    }
-    ?>
 
     <!-- Tabs -->
     <div class="tabs">
@@ -327,35 +311,100 @@ $paid_result = $paid_reservations->get_result();
 </section>
 
 
-
 <script>
-    // Tab functionality
-    const tabButtons = document.querySelectorAll('.tab-button');
-    const tabContents = document.querySelectorAll('.tab-content');
-    const activeTab = document.body.getAttribute('data-active');
+ <?php
+    if (!empty($warning_msg)) {
+        foreach ($warning_msg as $msg) {
+            echo "
+            Swal.fire({
+                icon: 'warning',
+                title: 'Warning',
+                text: '" . addslashes($msg) . "',
+                customClass: {
+                    container: 'swal-warning',
+                    popup: 'swal-warning',
+                    icon: 'swal-icon',
+                    title: 'swal-title',
+                    text: 'swal-text'
+                },
+                showConfirmButton: true,
+                confirmButtonColor: '#ffc107',
+                timer: 3000,
+                timerProgressBar: true
+            });";
+        }
+    }
 
-    // Set the correct active tab on page load
-    tabButtons.forEach(button => {
-        if (button.dataset.tab === activeTab) {
-            button.classList.add('active');
-            document.getElementById(activeTab).classList.add('active');
-        } else {
-            button.classList.remove('active');
-            document.getElementById(button.dataset.tab).classList.remove('active');
+    if (!empty($success_msg)) {
+        foreach ($success_msg as $msg) {
+            echo "
+            Swal.fire({
+                icon: 'success',
+                title: 'Success!',
+                text: '" . addslashes($msg) . "',
+                customClass: {
+                    container: 'swal-success',
+                    popup: 'swal-success',
+                    icon: 'swal-icon',
+                    title: 'swal-title',
+                    text: 'swal-text'
+                },
+                showConfirmButton: true,
+                confirmButtonColor: '#28a745',
+                timer: 3000,
+                timerProgressBar: true
+            });";
+        }
+    }
+    ?>
+
+// Rating submission confirmation
+function confirmRating(formElement) {
+    event.preventDefault();
+    Swal.fire({
+        title: 'Submit Rating',
+        text: 'Are you sure you want to submit this rating?',
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, submit!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            formElement.submit();
         }
     });
+}
 
-    // Handle tab button clicks
-    tabButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            tabButtons.forEach(btn => btn.classList.remove('active'));
-            tabContents.forEach(content => content.classList.remove('active'));
+// Tab functionality
+const tabButtons = document.querySelectorAll('.tab-button');
+const tabContents = document.querySelectorAll('.tab-content');
+const activeTab = document.body.getAttribute('data-active');
 
-            button.classList.add('active');
-            document.getElementById(button.dataset.tab).classList.add('active');
-        });
+// Set the correct active tab on page load
+tabButtons.forEach(button => {
+    if (button.dataset.tab === activeTab) {
+        button.classList.add('active');
+        document.getElementById(activeTab).classList.add('active');
+    } else {
+        button.classList.remove('active');
+        document.getElementById(button.dataset.tab).classList.remove('active');
+    }
+});
+
+// Handle tab button clicks
+tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        tabContents.forEach(content => content.classList.remove('active'));
+
+        button.classList.add('active');
+        document.getElementById(button.dataset.tab).classList.add('active');
     });
+});
 </script>
+
+
 
 </body>
 </html>
