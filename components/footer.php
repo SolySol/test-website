@@ -1,4 +1,4 @@
-<footer style="background-color: #2c3e50; color: white; padding: 20px 0; font-family: Arial, sans-serif;">
+<footer style="background-color: #2e2e2e; color: white; padding: 20px 0; font-family: Arial, sans-serif;">
   <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
     <!-- Company Info -->
     <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">

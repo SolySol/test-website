@@ -8,14 +8,15 @@
     font-family: 'Poppins', sans-serif;
 }
 body{
-    /* background: url("images/login-bg.jpg"); */
-    background-color: #bf9053;
+    background: url("C:\xampp\htdocs\project\images\login2.jpg");
+    background-color: #2e2e2e;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     overflow: hidden;
 }
 .wrapper{
+    
     display: flex;
     justify-content: center;
     align-items: center;
