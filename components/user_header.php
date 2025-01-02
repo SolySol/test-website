@@ -36,5 +36,6 @@ if ($user_id) {
         <a href="index.php#header1">Home</a>
         <a href="reservation.php">Reservation</a>
         <a href="bookings.php">My Bookings</a>
+        
     </nav>
 </section>

@@ -585,25 +585,107 @@ section{
 .date-filter form:last-child .btn:hover {
    background: #777;
 }
-
+/* General Mobile-Friendly Styling */
 @media (max-width: 768px) {
+   .heading {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+   }
+
+   .heading::after {
+      width: 80px;
+      height: 2px;
+   }
+
+   .tabs {
+      flex-direction: column;
+      gap: 0.5rem;
+   }
+
+   .tab-button {
+      font-size: 1.4rem;
+      padding: 0.8rem 1.5rem;
+   }
+
+   .bookings .box-container {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+   }
+
+   .bookings .box-container .box {
+      padding: 1.5rem;
+   }
+
+   .bookings .box-container .box p {
+      font-size: 1.4rem;
+   }
+
+   .bookings .box-container .box button {
+      font-size: 1.4rem;
+      padding: 0.8rem;
+   }
+
    .date-filter {
-       flex-direction: column;
-       gap: 1rem;
+      flex-direction: column;
+      gap: 1rem;
    }
-   
+
    .date-filter form {
-       width: 100%;
+      width: 100%;
    }
-   
+
    .date-filter input[type="date"] {
-       width: 100%;
+      width: 100%;
+      font-size: 1.2rem;
+      padding: 0.6rem;
    }
-   
+
    .date-filter .btn {
-       width: 100%;
+      width: 100%;
+      font-size: 1.2rem;
+      padding: 0.8rem;
    }
 }
+
+/* For smaller screens (max-width: 480px) */
+@media (max-width: 480px) {
+   .heading {
+      font-size: 1.8rem;
+   }
+
+   .heading::after {
+      width: 60px;
+   }
+
+   .tab-button {
+      font-size: 1.2rem;
+      padding: 0.6rem 1rem;
+   }
+
+   .bookings .box-container .box {
+      padding: 1rem;
+   }
+
+   .bookings .box-container .box p {
+      font-size: 1.2rem;
+   }
+
+   .bookings .box-container .box button {
+      font-size: 1.2rem;
+      padding: 0.6rem;
+   }
+
+   .date-filter input[type="date"] {
+      font-size: 1rem;
+      padding: 0.5rem;
+   }
+
+   .date-filter .btn {
+      font-size: 1rem;
+      padding: 0.6rem;
+   }
+}
+
 
 /* ------------end booking ---------------------- */
 

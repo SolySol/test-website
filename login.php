@@ -177,40 +177,59 @@ if (isset($_POST['login-btn'])) {
     </div>
 
     <script>
-       function myMenuFunction() {
-           var i = document.getElementById("navMenu");
-           if(i.className === "nav-menu") {
-               i.className += " responsive";
-           } else {
-               i.className = "nav-menu";
-           }
-       }
+      function myMenuFunction() {
+    const navMenu = document.getElementById("navMenu");
+    const menuIcon = document.querySelector(".bx-menu");
+    
+    navMenu.classList.toggle("responsive");
 
-       function login() {
-           var x = document.getElementById("login");
-           var y = document.getElementById("register");
-           var a = document.getElementById("loginBtn");
-           var b = document.getElementById("registerBtn");
-           x.style.left = "4px";
-           y.style.right = "-520px";
-           a.className += " white-btn";
-           b.className = "btn";
-           x.style.opacity = 1;
-           y.style.opacity = 0;
-       }
+    if (menuIcon) {
+        menuIcon.classList.toggle("bx-x");
+    }
+}
 
-       function register() {
-           var x = document.getElementById("login");
-           var y = document.getElementById("register");
-           var a = document.getElementById("loginBtn");
-           var b = document.getElementById("registerBtn");
-           x.style.left = "-510px";
-           y.style.right = "5px";
-           a.className = "btn";
-           b.className += " white-btn";
-           x.style.opacity = 0;
-           y.style.opacity = 1;
-       }
+document.addEventListener('click', function(event) {
+    const navMenu = document.getElementById("navMenu");
+    const menuBtn = document.querySelector(".nav-menu-btn");
+    
+    if (!menuBtn.contains(event.target) && !navMenu.contains(event.target)) {
+        navMenu.classList.remove("responsive");
+        const menuIcon = document.querySelector(".bx-menu");
+        if (menuIcon) {
+            menuIcon.classList.remove("bx-x");
+        }
+    }
+});
+
+function login() {
+    const loginForm = document.getElementById("login");
+    const registerForm = document.getElementById("register");
+    const loginBtn = document.getElementById("loginBtn");
+    const registerBtn = document.getElementById("registerBtn");
+
+    loginForm.style.left = "4px";
+    registerForm.style.right = "-520px";
+    loginBtn.className += " white-btn";
+    registerBtn.className = "btn";
+    loginForm.style.opacity = 1;
+    registerForm.style.opacity = 0;
+}
+
+function register() {
+    const loginForm = document.getElementById("login");
+    const registerForm = document.getElementById("register");
+    const loginBtn = document.getElementById("loginBtn");
+    const registerBtn = document.getElementById("registerBtn");
+
+    loginForm.style.left = "-510px";
+    registerForm.style.right = "5px";
+    loginBtn.className = "btn";
+    registerBtn.className += " white-btn";
+    loginForm.style.opacity = 0;
+    registerForm.style.opacity = 1;
+}
+
     </script>
+    
 </body>
 </html>
